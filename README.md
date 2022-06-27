@@ -1,7 +1,7 @@
-# concrete-compressive-strength-estimator
+# CONCRETE COMPRESSIVE STRENGTH ESTIMATOR
 Complete code for the working AI model for concrete compressive strength estimation
 
-## INSTALLATIONS
+## SETUP
 
 Step 1: `pip uninstall -y -r requirements.txt`
 
