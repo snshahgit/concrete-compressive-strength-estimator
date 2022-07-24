@@ -52,7 +52,7 @@ def pred():
     st.write("superplasticizer")
     
     age =st.number_input("",max_value=100000000.0)
-    st.write("Age")
+    st.write("Age of the mixture (in days)")
     
     
     st.write("")
