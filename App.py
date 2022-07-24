@@ -14,7 +14,7 @@ st.set_page_config(layout="wide")
 with st.sidebar:
     
     choose = option_menu("Welcome", ["Home", "Tech Stack","Predictor","ML Code", "Contributors"],
-                         icons=['house', 'calculator', 'exclamation-triangle','geo-alt', 'person lines fill'],
+                         icons=['house', 'stack', 'cpu','terminal', 'people-fill'],
                          menu_icon='building', default_index=0, 
                          styles={
                             "container": {"padding": "5!important", "background-color": "#1a1a1a"},
@@ -61,7 +61,7 @@ def pred():
 
     
     if(st.button("Submit")):
-        st.write((int(model.predict(df)[0])))
+        st.info((int(model.predict(df)[0])))
         
 
 with open('techstack.html','r') as f:
@@ -86,14 +86,14 @@ if choose=="Predictor":
 
     pred()
 elif choose=="Home":
-    st.title('AI for Healthcare')
+    st.title('AI for Infrastructure')
     st.markdown("<p style='text-align: justify;'>The objective of the project is to diagnostically predict whether or not a patient has Type 2 diabetes. \nThis predictor is built for Women above 21 years of age. The dataset, originally from the National Institute of Diabetes and Digestive and Kidney Diseases, used for this project consists of several medical predictor variables and one target variable, Outcome. Predictor variables includes the number of pregnancies the patient has had, their BMI, insulin level, age, and so on.</p>", unsafe_allow_html=True)
 
     # st.markdown("<h1 style='text-align: center;'>Healthcare AI</h1>", unsafe_allow_html=True)
 
-    with open("pic.html",'r') as f:
-        pic=f.read();
-    components.html(pic, height=400)
+    # with open("pic.html",'r') as f:
+    #     pic=f.read();
+    # components.html(pic, height=400)
 
     # def load_lottieurl(url: str):
     #     r = requests.get(url)
